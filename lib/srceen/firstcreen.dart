@@ -4,6 +4,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Center(
+        child:  Text("data",style: TextStyle(fontSize: 10,fontStyle: FontStyle.italic,fontWeight: FontWeight.w600),),
+      ),
+    );
   }
 }
