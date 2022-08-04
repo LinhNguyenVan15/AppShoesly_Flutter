@@ -8,7 +8,7 @@ class TheFirstScreen extends StatelessWidget {
     return const Scaffold(
       backgroundColor: Color(0xff101010),
       body: Center(
-        child: Text("SHOESLY Test",style: TextStyle(color: Color(0xffFFFFFF)),),
+        child: Text(" Test",style: TextStyle(color: Color(0xffFFFFFF)),),
       ),
 
     );
