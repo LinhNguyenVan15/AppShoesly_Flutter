@@ -5,13 +5,14 @@ class TheFirstScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xff101010),
-      body: Center(
-        child: Text(" Test",style: TextStyle(color: Color(0xffFFFFFF)),),
+    return const Material(
+      child:Scaffold(
+        body: Center(
+          child: Image(
+            image: AssetImage('assets/images/onboarding.png'),
+          ),
+        ),
       ),
-
     );
   }
 }
-
