@@ -23,74 +23,92 @@ class DemoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber,
-      body: Center(
-        child: Row(
+      body: Container(
+        child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
+              padding: const EdgeInsets.only(left: 24, top: 13),
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(100),
-                border: Border.all(color: const Color(0xffE7E7E7))
+                color: const Color(0xff101010),
+                borderRadius: BorderRadius.circular(100),
               ),
-              child: Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xffF3F3F3),
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    child: Image.asset(
-                      icGoogle,
-                      width: 20,
-                      height: 20,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      "google".toUpperCase(),
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w700, fontSize: 14),
-                    ),
-                  ),
-                ],
+              child: Text(
+                "Get Started".toUpperCase(),
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xffFFFFFF),
+                ),
               ),
             ),
-
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
-              decoration: BoxDecoration(
-                  color: Colors.white,git
-                  borderRadius: BorderRadius.circular(100),
-                  border: Border.all(color: const Color(0xffE7E7E7))
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xffF3F3F3),
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    child: Image.asset(
-                      icFacebook,
-                      width: 20,
-                      height: 20,
-                    ),
+            Row(
+              children: [
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: const Color(0xffE7E7E7))),
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: const Color(0xffF3F3F3),
+                        ),
+                        padding: const EdgeInsets.all(10),
+                        child: Image.asset(
+                          icGoogle,
+                          width: 20,
+                          height: 20,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          "google".toUpperCase(),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 14),
+                        ),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      "facebook".toUpperCase(),
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w700, fontSize: 14),
-                    ),
+                ),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(color: const Color(0xffE7E7E7))),
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: const Color(0xffF3F3F3),
+                        ),
+                        padding: const EdgeInsets.all(10),
+                        child: Image.asset(
+                          icFacebook,
+                          width: 20,
+                          height: 20,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          "facebook".toUpperCase(),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 14),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            )
+                )
+              ],
+            ),
           ],
         ),
       ),
