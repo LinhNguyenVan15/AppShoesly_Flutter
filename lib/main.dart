@@ -5,7 +5,7 @@ void main() {
   const icFacebook = 'assets/images/ic_facebook.png';
   runApp(
     const MaterialApp(
-      home: DemoScreen(icGoogle: icGoogle,icFacebook: icFacebook),
+      home: DemoScreen(icGoogle: icGoogle, icFacebook: icFacebook),
     ),
   );
 }
@@ -15,7 +15,6 @@ class DemoScreen extends StatelessWidget {
     Key? key,
     required this.icGoogle,
     required this.icFacebook,
-
   }) : super(key: key);
 
   final String icGoogle;
@@ -27,54 +26,70 @@ class DemoScreen extends StatelessWidget {
       body: Center(
         child: Row(
           children: [
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: const Color(0xffF3F3F3),
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(100),
+                border: Border.all(color: const Color(0xffE7E7E7))
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xffF3F3F3),
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    child: Image.asset(
+                      icGoogle,
+                      width: 20,
+                      height: 20,
+                    ),
                   ),
-                  padding: const EdgeInsets.all(10),
-                  child: Image.asset(
-                    icGoogle,
-                    width: 20,
-                    height: 20,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "google".toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w700, fontSize: 14),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
-                  child: Text(
-                    "google".toUpperCase(),
-                    style:
-                        const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
 
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: const Color(0xffF3F3F3),
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 25),
+              decoration: BoxDecoration(
+                  color: Colors.white,git
+                  borderRadius: BorderRadius.circular(100),
+                  border: Border.all(color: const Color(0xffE7E7E7))
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xffF3F3F3),
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    child: Image.asset(
+                      icFacebook,
+                      width: 20,
+                      height: 20,
+                    ),
                   ),
-                  padding: const EdgeInsets.all(10),
-                  child: Image.asset(
-                  icFacebook,
-                    width: 20,
-                    height: 20,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "facebook".toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w700, fontSize: 14),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
-                  child: Text(
-                    "Facebook".toUpperCase(),
-                    style:
-                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
-                  ),
-                ),
-              ],
+                ],
+              ),
             )
           ],
         ),
