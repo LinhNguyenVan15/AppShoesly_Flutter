@@ -7,6 +7,7 @@ const imgOnBoarDing = 'assets/images/onboarding.png';
 void main() {
   runApp(
     const MaterialApp(
+      debugShowCheckedModeBanner:false,
       home: DemoScreen(),
     ),
   );
