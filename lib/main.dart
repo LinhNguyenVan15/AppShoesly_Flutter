@@ -7,7 +7,7 @@ const imgOnBoarDing = 'assets/images/onboarding.png';
 void main() {
   runApp(
     const MaterialApp(
-      debugShowCheckedModeBanner:false,
+      debugShowCheckedModeBanner: false,
       home: DemoScreen(),
     ),
   );
@@ -21,6 +21,16 @@ class DemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: const Center(
+          child:  Text("data"),
+        ),
+        title: const Text("data"),
+        actions: const [
+          Text("text1"),
+          Text("text2")
+        ],
+      ),
       backgroundColor: const Color(0xffffffff),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -76,17 +86,23 @@ class DemoScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30 ),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Row(
                     children: const [
                       Expanded(
-                        child: MyButtonSocial(icon: icGoogle,text: "google",),
+                        child: MyButtonSocial(
+                          icon: icGoogle,
+                          text: "google",
+                        ),
                       ),
                       SizedBox(width: 15),
                       Expanded(
-                        child: MyButtonSocial(icon: icFacebook,text: "facebook",),
+                        child: MyButtonSocial(
+                          icon: icFacebook,
+                          text: "facebook",
+                        ),
                       ),
                     ],
                   ),
@@ -122,7 +138,7 @@ class MyButtonSocial extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
                 border: Border.all(color: const Color(0xffE7E7E7))),
             child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+              padding: const EdgeInsets.symmetric(vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -141,7 +157,7 @@ class MyButtonSocial extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Text(
-                     text.toUpperCase(),
+                      text.toUpperCase(),
                       style: const TextStyle(
                           fontWeight: FontWeight.w700, fontSize: 14),
                     ),
