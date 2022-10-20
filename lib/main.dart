@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linhtest/src/appbar_custom.dart';
 
 const icGoogle = 'assets/images/ic_google.png';
 const icFacebook = 'assets/images/ic_facebook.png';
@@ -22,14 +23,7 @@ class DemoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Center(
-          child:  Text("data"),
-        ),
         title: const Text("data"),
-        actions: const [
-          Text("text1"),
-          Text("text2")
-        ],
       ),
       backgroundColor: const Color(0xffffffff),
       body: SingleChildScrollView(
@@ -171,3 +165,5 @@ class MyButtonSocial extends StatelessWidget {
     );
   }
 }
+///the coffe house
+///
