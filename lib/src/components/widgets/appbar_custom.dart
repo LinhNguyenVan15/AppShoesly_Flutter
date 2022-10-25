@@ -18,9 +18,9 @@ class _AppbarCustomState extends State<AppbarCustom> {
       color: Colors.green,
       child: Row(
         children: [
-          Text("app bar custom"),
-          CupertinoButton(
-            child: Text("Click"),
+          const Text("app bar custom"),
+           CupertinoButton (
+              child: Text("Click"),
             onPressed: () {},
             color: Colors.amber,
           )
