@@ -1,32 +1,31 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AppbarCustom extends StatefulWidget implements PreferredSizeWidget{
-  const AppbarCustom({Key? key}) : super(key: key);
-
+class AppbarCustom extends StatefulWidget implements PreferredSizeWidget {
   @override
-  State<AppbarCustom> createState() => _AppbarCustomState();
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-
-  @override
-  // TODO: implement child
-  Widget get child => throw UnimplementedError();
+  State<StatefulWidget> createState() => _AppbarCustomState();
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => throw UnimplementedError();
+  Size get preferredSize => Size(600, 100);
 }
 
 class _AppbarCustomState extends State<AppbarCustom> {
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Container(
-      child: Text("data"),
-
+      color: Colors.green,
+      child: Row(
+        children: [
+          Text("app bar custom"),
+          CupertinoButton(
+            child: Text("Click"),
+            onPressed: () {},
+            color: Colors.amber,
+          )
+        ],
+      ),
     );
   }
 }

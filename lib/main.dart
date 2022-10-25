@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:linhtest/src/appbar_custom.dart';
+import 'package:linhtest/src/mybutton_social.dart';
+import 'src/appbar_custom.dart';
 
 const icGoogle = 'assets/images/ic_google.png';
 const icFacebook = 'assets/images/ic_facebook.png';
@@ -22,9 +23,8 @@ class DemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("data"),
-      ),
+      appBar:
+      AppbarCustom(),
       backgroundColor: const Color(0xffffffff),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -110,60 +110,5 @@ class DemoScreen extends StatelessWidget {
   }
 }
 
-class MyButtonSocial extends StatelessWidget {
-  const MyButtonSocial({
-    Key? key,
-    required this.icon,
-    required this.text,
-  }) : super(key: key);
-
-  final String icon;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(0),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(100),
-                border: Border.all(color: const Color(0xffE7E7E7))),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: const Color(0xffF3F3F3),
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    child: Image.asset(
-                      icon,
-                      width: 10.0,
-                      height: 10.0,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      text.toUpperCase(),
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w700, fontSize: 14),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 ///the coffe house
 ///
