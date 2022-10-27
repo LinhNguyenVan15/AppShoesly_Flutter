@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../constants/image_constants.dart';
+import '../components/constants/image_constants.dart';
 import '../components/widgets/mybutton_social.dart';
 
 
-class DemoScreen extends StatelessWidget {
-  const DemoScreen({
+class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({
     Key? key,
   }) : super(key: key);
 
