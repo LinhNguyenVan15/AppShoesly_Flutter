@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:linhtest/src/features/sign_up/sign_up_screen.dart';
 import '../components/constants/image_constants.dart';
 import '../components/widgets/mybutton_social.dart';
 
 
-class OnBoardingScreen extends StatelessWidget {
+class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
+}
+
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  void _onTapGetstart(){
+    Navigator.of(context).push(MaterialPageRoute (
+      builder: (BuildContext context) => const SignUpScreen(),
+    ),);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,21 +57,24 @@ class OnBoardingScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30)
                     .copyWith(bottom: 20),
-                child: Container(
-                  width: double.infinity,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: const Color(0xff101010)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Text(
-                      "Get Started".toUpperCase(),
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xffFFFFFF),
+                child: GestureDetector(
+                  onTap: _onTapGetstart,
+                  child: Container(
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color(0xff101010)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Text(
+                        "Get Started".toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xffFFFFFF),
+                        ),
                       ),
                     ),
                   ),
@@ -95,4 +110,6 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
+
+
 
