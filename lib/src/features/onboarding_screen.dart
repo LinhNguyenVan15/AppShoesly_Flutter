@@ -3,7 +3,6 @@ import 'package:linhtest/src/features/sign_up/sign_up_screen.dart';
 import '../components/constants/image_constants.dart';
 import '../components/widgets/mybutton_social.dart';
 
-
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({
     Key? key,
@@ -14,10 +13,12 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  void _onTapGetstart(){
-    Navigator.of(context).push(MaterialPageRoute (
-      builder: (BuildContext context) => const SignUpScreen(),
-    ),);
+  void _onTapGetStart() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (BuildContext context) => const SignUpScreen(),
+      ),
+    );
   }
 
   @override
@@ -43,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
               const Padding(
                 padding:
-                EdgeInsets.only(top: 20, bottom: 107, left: 45, right: 45),
+                    EdgeInsets.only(top: 20, bottom: 107, left: 45, right: 45),
                 child: Text(
                   "Get your dream item easily and safely with Shoesly. and get other interesting offers",
                   textAlign: TextAlign.center,
@@ -58,7 +59,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 30)
                     .copyWith(bottom: 20),
                 child: GestureDetector(
-                  onTap: _onTapGetstart,
+                  onTap: _onTapGetStart,
                   child: Container(
                     width: double.infinity,
                     height: 50,
@@ -110,6 +111,3 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     );
   }
 }
-
-
-

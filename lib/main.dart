@@ -8,9 +8,6 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: OnBoardingScreen(),
     ),
-  );
+  );  
 }
 
-
-///the coffe house
-///
