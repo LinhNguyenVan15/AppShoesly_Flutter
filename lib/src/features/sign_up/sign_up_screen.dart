@@ -9,6 +9,8 @@ class SignUpScreen extends StatefulWidget {
   State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
+
+
 class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
@@ -26,9 +28,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
               color: Colors.amber,
             ),
           ),
-          const WishlistWidget()
+          const WishlistWidget(),
+          SizedBox(
+            height: 400,
+            child: PageView(
+              children: [
+                Container(
+                  child: Text("data1"),
+                  color: Colors.amber,
+                ),
+                Container(
+                   child:  Text("data2"),
+                  color: Colors.green,
+                ),
+                Container (
+                  child:  Text("data3"),
+                  color: Colors.deepOrange,
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
   }
 }
+

@@ -11,27 +11,34 @@ class WishlistWidget extends StatefulWidget {
 }
 
 class _WishlistWidgetState extends State<WishlistWidget> {
-  var _isSlected = false;
+  var _isSlected = true;
   void _onTap() {
-    setState(() {
-      _isSlected = !_isSlected;
-    },);
+    setState(
+      () {
+        _isSlected = !_isSlected;
+      },
+    );
   }
-    @override
-    Widget build(BuildContext context) {
-      return GestureDetector(
-        onTap: _onTap,
-        child: Container(
-          width: _size,
-          height: _size,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100), color: Colors.white),
-          padding: const EdgeInsets.all(6),
-          child: SvgPicture.asset(
-            _isSlected?'assets/icons/ic_wishlist.svg':'assets/icons/ic_wishListed.svg',
-            color: const Color(0xFF101010),
-          ),
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _onTap,
+      child: Container(
+        width: _size,
+        height: _size,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(100), color: Colors.white),
+        padding: const EdgeInsets.all(6),
+        child: SvgPicture.asset(
+          _isSlected
+              ? 'assets/icons/ic_wishlist.svg'
+              : 'assets/icons/ic_wishListed.svg',
+          width: 12,
+          height: 12,
+          color: const Color(0xFF101010),
         ),
-      );
-    }
+      ),
+    );
+  }
 }
