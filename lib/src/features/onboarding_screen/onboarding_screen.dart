@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:linhtest/src/features/sign_up/sign_up_screen.dart';
-import '../components/constants/image_constants.dart';
-import '../components/widgets/mybutton_social.dart';
+import '../../components/constants/image_constants.dart';
+import '../../components/widgets/mybutton_social.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({
@@ -58,24 +58,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30)
                     .copyWith(bottom: 20),
-                child: GestureDetector(
-                  onTap: _onTapGetStart,
-                  child: Container(
-                    width: double.infinity,
-                    height: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        color: const Color(0xff101010)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Text(
-                        "Get Started".toUpperCase(),
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xffFFFFFF),
-                        ),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: _onTapGetStart,
+                    child: Text(
+                      "Get Started".toUpperCase(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xffFFFFFF),
                       ),
                     ),
                   ),

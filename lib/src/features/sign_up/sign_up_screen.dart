@@ -20,8 +20,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: Column(
         children: [
           Center(
-             child: CupertinoButton(
-              child: Text("Click Here"),
+             child:  CupertinoButton(
+                child:  Text("Click Here"),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -34,7 +34,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: PageView(
               children: [
                 Container(
-                  child: Text("data1"),
+                  child:  Text("data1"),
                   color: Colors.amber,
                 ),
                 Container(
@@ -47,7 +47,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 )
               ],
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30)
+                .copyWith(bottom: 20),
+            child: InkWell(
+              onTap: (){},
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: const Color(0xff101010)),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Text(
+                    "Get Started".toUpperCase(),
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xffFFFFFF),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
