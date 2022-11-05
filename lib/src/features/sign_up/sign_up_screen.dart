@@ -1,9 +1,13 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:linhtest/src/components/widgets/wishlist_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
+
+
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
@@ -12,13 +16,22 @@ class SignUpScreen extends StatefulWidget {
 
 
 class _SignUpScreenState extends State<SignUpScreen> {
+
+  final dataStr='''
+  {
+  "name": "John Smith",
+  "email": "john@example.com"
+}
+  ''' ;
   @override
   Widget build(BuildContext context) {
+    final json=jsonDecode(dataStr);
     return Scaffold(
       backgroundColor: Colors.black12,
       appBar: AppBar(title: const Text("Sign Up")),
       body: Column(
         children: [
+          Text(json['name']??''),
           Center(
              child:  CupertinoButton(
                 child:  Text("Click Here"),
